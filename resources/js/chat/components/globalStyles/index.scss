@@ -1,0 +1,18 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+
+:root {
+    --color-button-submit: '#fff';
+    --color-button-disable: '#fff';
+}
+
+body {
+    font-family: 'Playpen Sans', 'roboto';
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    text-rendering: optimizeSpeed;
+}

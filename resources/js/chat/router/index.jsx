@@ -1,11 +1,22 @@
-import { createBrowserRouter } from "react-router-dom";
-import HomePage from "../pages";
+import routersArray from "../helpers/routers";
+import { Routes, Route } from "react-router-dom";
+import Main from "../layouts";
 
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <HomePage/>
-    }
-])
+const RouterApp = () => {
+    return (
+        <Routes>
+            {routersArray.map((router) => {
+                const Page = router.component;
+                return (
+                    <Route
+                        key={router.key}
+                        path={router.path}
+                        element={<Main><Page/></Main>}
+                    />
+                );
+            })}
+        </Routes>
+    );
+};
 
-export default router;
+export default RouterApp;
